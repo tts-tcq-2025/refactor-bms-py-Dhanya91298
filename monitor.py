@@ -12,21 +12,13 @@ def loop_for_print():
     sleep(1)
   
 def range_check(value,minv,maxv):
-  retVal = False
-  if 'NA' not in minv or 'NA' not in maxv:
-    if value > maxv or value < minv:
-      loop_for_print()
-    else:
-       retVal = True
-  else:
-    if 'NA' in minv and value > maxv:
+    minv = None if minv == 'NA' else minv
+    maxv = None if maxv == 'NA' else maxv
+
+    if (minv is not None and value < minv) or (maxv is not None and value > maxv):
         loop_for_print()
-    elif 'NA' in maxv and value<minv:
-         loop_for_print()
-    else:
-       retVal = True
-      
-  return retVal
+        return False
+    return True
   
 def vitals_ok(temperature, pulseRate, spo2):
   rangeChecksMessages = {
