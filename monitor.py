@@ -1,7 +1,7 @@
 from time import sleep
 import sys
 
-def loop_for_print_alert_message():
+def loop_for_print():
     for _ in range(6):
         print('\r* ', end='')
         sys.stdout.flush()
@@ -10,16 +10,18 @@ def loop_for_print_alert_message():
         sys.stdout.flush()
         sleep(1)
 
+def is_below_min(value, minv):
+    return minv != 'NA' and value < minv
+
+def is_above_max(value, maxv):
+    return maxv != 'NA' and value > maxv
+
 def is_out_of_range(value, minv, maxv):
-    if minv != 'NA' and value < minv:
-        return True
-    if maxv != 'NA' and value > maxv:
-        return True
-    return False
+    return is_below_min(value, minv) or is_above_max(value, maxv)
 
 def range_check(value, minv, maxv):
     if is_out_of_range(value, minv, maxv):
-        loop_for_print_alert_message()
+        loop_for_print()
         return False
     return True
 
