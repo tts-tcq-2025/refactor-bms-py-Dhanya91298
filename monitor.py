@@ -28,7 +28,7 @@ def range_check(value, minv, maxv):
 def vitals_ok(temperature, pulseRate, spo2):
     checks = {
         "Temperature": range_check(temperature, 95, 102),
-        "Pulse Rate": range_check(pulseRate, 20, 60),
+        "Pulse Rate": range_check(pulseRate, 60, 100),
         "SpO2": range_check(spo2, 90, 'NA')
     }
 
