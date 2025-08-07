@@ -1,7 +1,7 @@
 from time import sleep
 import sys
 
-def loop_for_print():
+def loop_for_print_alert_message():
     for _ in range(6):
         print('\r* ', end='')
         sys.stdout.flush()
@@ -19,7 +19,7 @@ def is_out_of_range(value, minv, maxv):
 
 def range_check(value, minv, maxv):
     if is_out_of_range(value, minv, maxv):
-        loop_for_print()
+        loop_for_print_alert_message()
         return False
     return True
 
