@@ -11,7 +11,7 @@ Health Monitoring Systems
 Continuous monitoring of vital signs, such as respiration and heartbeat, plays a crucial role in early detection and prediction of conditions that may affect the wellbeing of a patient. 
 
 Monitoring requires accurate reading and thresholding of the vitals.
-Extension: Give early warning to the user by checking if the values are within a tolerence level. If the values are withing the tolerence range, then indicate with an early warning message
+
 
 ## Issues
 
@@ -47,3 +47,6 @@ Shorten the Semantic distance
 - Functional to express relation between input and output
 - Object oriented to encapsulate state with actions
 - Aspect oriented to capture repeating aspects
+
+## Extension: 
+Give early warning to the user by checking if the values are within a tolerence level. If the values are withing the tolerence range, then indicate with an early warning message
